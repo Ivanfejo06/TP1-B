@@ -61,10 +61,18 @@ while not finalizar:
             print("Alguno de los dos caracteres ingtresados no es un numero entero.")
 
     elif opcion_seleccionada == 'C':
-        # [COMPLETAR]
+         n_str:str = input('Ingrese n: ')
+         a_str:str = input('Ingrese a: ')
+         b_str:str = input('Ingrese b: ')
+         k_str:str = input('Ingrese k: ')
+       #COMPLETAR
         pass  # borrar esta línea
 
     elif opcion_seleccionada == 'D':
+         n_str:str = input('Ingrese n: ')
+         a_str:str = input('Ingrese a: ')
+         b_str:str = input('Ingrese b: ')
+
         # [COMPLETAR]
         pass  # borrar esta línea
 
