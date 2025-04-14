@@ -45,8 +45,13 @@ while not finalizar:
             print("Alguno de los dos caracteres ingtresados no es un numero entero.")
         
     elif opcion_seleccionada == 'B':
-        # [COMPLETAR]
-        pass  # borrar esta línea
+        n_str:str = input('Ingrese n: ')
+        m_str:str = input('Ingrese a: ')
+        b_str:str = input('Ingrese b: ')
+        k_str:str = input('Ingrese k: ')
+        res:int = cantidad_con_simBP_en_intervalo(n_str,m_str,b_str,k_str)
+        res_esperada:str = ('La cantidad de enteros con simBP en el intervalo [n,a,b,k] es', res)
+       
 
     elif opcion_seleccionada == 'C':
         # [COMPLETAR]
