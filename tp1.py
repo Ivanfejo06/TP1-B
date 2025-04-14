@@ -36,11 +36,13 @@ while not finalizar:
     if opcion_seleccionada == 'A':
         n_str:str = input('Ingrese n: ')
         m_str:str = input('Ingrese m: ')
-        # [COMPLETAR]
+        respuesta:int = simBP(n_str,m_str)
+         respuesta_esperada:str = ('La similitud binaria del prefijo [n,m] es', respuesta)
+       #ivan me chequeas si esta bien asi. ty
+   
 
     elif opcion_seleccionada == 'B':
-        # [COMPLETAR]
-        pass  # borrar esta línea
+        
 
     elif opcion_seleccionada == 'C':
         # [COMPLETAR]
