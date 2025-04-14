@@ -36,7 +36,7 @@ while not finalizar:
     if opcion_seleccionada == 'A':
         n_str:str = input('Ingrese n: ')
         m_str:str = input('Ingrese m: ')
-        if(int(n_str) and int(m_str)):
+        if(n_str.isdigit() and m_str.isdigit()):
             n:int = int(n_str)
             m:int = int(m_str)
             count:int = simBP(n,m)
@@ -46,12 +46,19 @@ while not finalizar:
         
     elif opcion_seleccionada == 'B':
         n_str:str = input('Ingrese n: ')
-        m_str:str = input('Ingrese a: ')
+        a_str:str = input('Ingrese a: ')
         b_str:str = input('Ingrese b: ')
         k_str:str = input('Ingrese k: ')
-        res:int = cantidad_con_simBP_en_intervalo(n_str,m_str,b_str,k_str)
-        res_esperada:str = ('La cantidad de enteros con simBP en el intervalo [n,a,b,k] es', res)
-       
+
+        if(n_str.isdigit() and a_str.isdigit() and b_str.isdigit() and k_str.isdigit()):
+            n:int = int(n_str)
+            a:int = int(a_str)
+            b:int = int(b_str)
+            k:int = int(k_str)
+            count:int = cantidad_con_simBP_en_intervalo(n,a,b,k)
+            print(f'La cantidad de enteros con simBP en {n} de los primeros {k} digitos en el intervalo [{a},{b}] es {count}') 
+        else:
+            print("Alguno de los dos caracteres ingtresados no es un numero entero.")
 
     elif opcion_seleccionada == 'C':
         # [COMPLETAR]
