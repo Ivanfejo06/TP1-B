@@ -42,7 +42,7 @@ while not finalizar:
             count:int = simBP(n,m)
             print(f"La cantidad de digitos del simBP es de {count} digitos.") 
         else:
-            print("Alguno de los dos caracteres ingtresados no es un numero entero.")
+            print("Alguno de los dos caracteres ingresados no es un numero entero.")
         
     elif opcion_seleccionada == 'B':
         n_str:str = input('Ingrese n: ')
@@ -58,15 +58,40 @@ while not finalizar:
             count:int = cantidad_con_simBP_en_intervalo(n,a,b,k)
             print(f'La cantidad de enteros con simBP en {n} de los primeros {k} digitos en el intervalo [{a},{b}] es {count}') 
         else:
-            print("Alguno de los dos caracteres ingtresados no es un numero entero.")
+            print("Alguno de los dos caracteres ingresados no es un numero entero.")
 
     elif opcion_seleccionada == 'C':
-        # [COMPLETAR]
-        pass  # borrar esta línea
+        n_str:str = input('Ingrese n: ')
+        a_str:str = input('Ingrese a: ')
+        b_str:str = input('Ingrese b: ')
+        k_str:str = input('Ingrese k: ')
+
+        if(n_str.isdigit() and a_str.isdigit() and b_str.isdigit() and k_str.isdigit()):
+            n:int = int(n_str)
+            a:int = int(a_str)
+            b:int = int(b_str)
+            k:int = int(k_str)
+            exists:bool = existe_con_simBP_en_intervalo(n,a,b,k)
+            if (exists):
+                print(f'Dentro del intervalo [{a},{b}] existen simBP para el numero {n}.')
+            else:
+                print(f'No existe nungina simBP para {n} en el intervalo [{a},{b}].')
+        else:
+            print("Alguno de los dos caracteres ingresados no es un numero entero.")
 
     elif opcion_seleccionada == 'D':
-        # [COMPLETAR]
-        pass  # borrar esta línea
+        n_str:str = input('Ingrese n: ')
+        a_str:str = input('Ingrese a: ')
+        b_str:str = input('Ingrese b: ')
+
+        if(n_str.isdigit() and a_str.isdigit() and b_str.isdigit()):
+            n:int = int(n_str)
+            a:int = int(a_str)
+            b:int = int(b_str)
+            best:int = numero_con_mayor_simBP_en_intervalo(n,a,b)
+            print(f'EL menor numero posible con mayor simBP para {n} dentro del intervalo [{a},{b}] es el numero {best}.') 
+        else:
+            print("Alguno de los dos caracteres ingresados no es un numero entero.")
 
     elif opcion_seleccionada == 'F':
         finalizar = True
