@@ -89,7 +89,10 @@ while not finalizar:
             a:int = int(a_str)
             b:int = int(b_str)
             best:int = numero_con_mayor_simBP_en_intervalo(n,a,b)
-            print(f'EL menor numero posible con mayor simBP para {n} dentro del intervalo [{a},{b}] es el numero {best}.') 
+            if(best > 0):
+                print(f'EL menor numero posible con mayor simBP para {n} dentro del intervalo [{a},{b}] es el numero {best}.')
+            else:
+                print("No hay coincidencias")
         else:
             print("Alguno de los dos caracteres ingresados no es un numero entero.")
 
