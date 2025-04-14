@@ -84,13 +84,13 @@ def numero_con_mayor_simBP_en_intervalo(n:int, a:int, b:int) -> int:
         En caso de haber más de uno, devuelve el menor de ellos.'''
     
     if n > 0 and a > 0 and b > 0 and a <= b:
-        bin_n = bin(n)[2:]  # binario de n sin '0b'
+        bin_n = bin(n).replace('0b', '')  # binario de n sin '0b'
         i = a
         max_simBP = -1
         mejor_numero = a  # Se empieza con el primer número del intervalo
 
         while i <= b:
-            bin_i = bin(i)[2:]  # binario de i
+            bin_i = bin(i).replace('0b', '')  # binario de i
             max_len = max(len(bin_n), len(bin_i))
             bin_n_aligned = bin_n.zfill(max_len)
             bin_i_aligned = bin_i.zfill(max_len)

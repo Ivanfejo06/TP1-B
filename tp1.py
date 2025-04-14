@@ -36,8 +36,14 @@ while not finalizar:
     if opcion_seleccionada == 'A':
         n_str:str = input('Ingrese n: ')
         m_str:str = input('Ingrese m: ')
-        # [COMPLETAR]
-
+        if(int(n_str) and int(m_str)):
+            n:int = int(n_str)
+            m:int = int(m_str)
+            count:int = simBP(n,m)
+            print(f"La cantidad de digitos del simBP es de {count} digitos.") 
+        else:
+            print("Alguno de los dos caracteres ingtresados no es un numero entero.")
+        
     elif opcion_seleccionada == 'B':
         # [COMPLETAR]
         pass  # borrar esta línea
